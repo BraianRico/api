@@ -1,0 +1,17 @@
+[33mcommit c0f5f7c6b77c36474142732bd6e37622ac23c6f2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: BraianRico <daviidriico@gmail.com>
+Date:   Tue Dec 28 19:39:07 2021 -0500
+
+    configuración basica del controlador
+
+[33mcommit 0c222ef6f68a3e8ad056766878f473dc95b4e892[m
+Author: BraianRico <daviidriico@gmail.com>
+Date:   Tue Dec 28 18:45:16 2021 -0500
+
+    Implementación logica
+
+[33mcommit 35b4e868dbd8ef3037bb837899ecc8b2c01a1744[m
+Author: BraianRico <daviidriico@gmail.com>
+Date:   Tue Dec 28 17:28:02 2021 -0500
+
+    configuración inicial y migración de tabla user

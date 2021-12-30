@@ -25,7 +25,7 @@ interface UserServiceInterface
      * @param integer $id
      * @return void
      */
-    function postUser(array $user, int $id);
+    function postUser(array $user);
 
     /**
      *

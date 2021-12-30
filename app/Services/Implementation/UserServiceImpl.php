@@ -1,9 +1,10 @@
 <?php
 
-namespace App\service\ìmplementation;
+namespace App\services\Implementation;
 
 use App\Models\User;
 use App\Services\Interface\UserServiceInterface;
+use Illuminate\Support\Facades\Hash;
 
 class UserServiceImpl implements UserServiceInterface
 {
@@ -20,9 +21,17 @@ class UserServiceImpl implements UserServiceInterface
     function getUserById(int $id)
     {
     }
-    function postUser(array $user, int $id)
+
+    /**
+     * Crea un nuevo usuario en el sistema
+     *
+     */
+    function postUser(array $user)
     {
+        $user['password'] = Hash::make($user['password']);
+        $this->model->create($user);
     }
+
     function putUser(array $user, int $id)
     {
     }

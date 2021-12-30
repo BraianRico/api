@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\service\ìmplementation\UserServiceImpl;
+use App\services\Implementation\UserServiceImpl;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -23,5 +23,12 @@ class UserController extends Controller
     {
         $this->userService = $userService;
         $this->request = $request;
+    }
+
+    function createUser()
+    {
+        $response = response("", 201);
+        $this->userService->postUser($this->request->all());
+        return $response;
     }
 }
