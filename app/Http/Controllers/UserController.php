@@ -31,4 +31,9 @@ class UserController extends Controller
         $this->userService->postUser($this->request->all());
         return $response;
     }
+
+    function listUser()
+    {
+        return response($this->userService->getUser());
+    }
 }
