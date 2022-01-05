@@ -38,6 +38,11 @@ class UserServiceImpl implements UserServiceInterface
 
     function putUser(array $user, int $id)
     {
+        $user['password'] = Hash::make($user['password']);
+        $this->model->where('id', $id)
+            ->first()
+            ->fill($user)
+            ->save();
     }
     function delUser(int $id)
     {

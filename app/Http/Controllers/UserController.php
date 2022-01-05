@@ -36,4 +36,11 @@ class UserController extends Controller
     {
         return response($this->userService->getUser());
     }
+
+    function updateUser(int $id)
+    {
+        $response = response("", 202);
+        $this->userService->putUser($this->request->all(), $id);
+        return $response;
+    }
 }

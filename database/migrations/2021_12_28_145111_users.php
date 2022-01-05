@@ -16,7 +16,7 @@ class Users extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->engine = 'InnoDB';
 
-            $table->bigIncrements('int')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->string('firsname', 255);
             $table->string('lastname', 255);
             $table->string('document_type', 10);
